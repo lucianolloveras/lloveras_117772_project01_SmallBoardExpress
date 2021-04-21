@@ -139,3 +139,1300 @@ def main():
     salida.setStyle("italic")
     salida.draw(win)
 
+    #Se la variable pos que representara la poscion que ocupa la ficha dentro del tablero.
+    pos = 0
+    pos2 = 0
+    
+    while (pos < 11) or (pos2 < 11):
+        
+        
+        #Jugador 01
+        #Siempre la primer posicion va a ser equivalente a cero porque es el punto de partida, por lo tanto, comienza en esta logica.
+        #Como el lanzamiento se hace antes del ciclo "while", de acuerdo al valor aleatorio obtenido, se obtiene la nueva posicion y se mueve la ficha.
+        if (pos == 0):
+            #Primer lanzamiento del dado.
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 2")
+            nombre = "Jugador 2"
+            if (lanzamiento1 == 1):
+                p1.move(280,0)
+                label1.move(280,0)
+                pos = pos + 1
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p1.move(500,0)
+                label1.move(500,0)
+                pos = pos + 2
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p1.move(720,0)
+                label1.move(720,0)
+                pos = pos + 3
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p1.move(940,0)
+                label1.move(940,0)
+                pos = pos + 4
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 5):
+                p1.move(1180,0)
+                label1.move(1180,0)
+                pos = pos + 5
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 6):
+                p1.move(0,180)
+                label1.move(0,180)
+                pos = pos + 6
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+        
+
+        if pos2 == 0:
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 1")
+            nombre = "Jugador 1"
+            if (lanzamiento1 == 1):
+                p2.move(250,0)
+                label2.move(250,0)
+                pos2 = pos2 + 1
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p2.move(470,0)
+                label2.move(470,0)
+                pos2 = pos2 + 2
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p2.move(690,0)
+                label2.move(690,0)
+                pos2 = pos2 + 3
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p2.move(910,0)
+                label2.move(910,0)
+                pos2 = pos2 + 4
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 5):
+                p2.move(1130,0)
+                label2.move(1130,0)
+                pos2 = pos2 + 5
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 6):
+                p2.move(0,180)
+                label2.move(0,180)
+                pos2 = pos2 + 6
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+                
+        
+        #Se encuentra programado de forma correcta, sacar comentario cuando haya terminado con las demas posiciones           
+        # #Posicion 1
+        #win.getMouse()
+        #lanzamiento1 = random.randint(1,6)
+        #salida.setText(lanzamiento1)
+        #while (pos >= 1) and (pos < 2):
+        if (nombre == "Jugador 1") and (pos == 1):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 2")
+            nombre = "Jugador 2"
+            if (lanzamiento1 == 1):
+                p1.move(220,0)
+                label1.move(220,0)
+                pos = pos + 1
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p1.move(440,0)
+                label1.move(440,0)
+                pos = pos + 2
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p1.move(660,0)
+                label1.move(660,0)
+                pos = pos + 3
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p1.move(880,0)
+                label1.move(880,0)
+                pos = pos + 4
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 5):    
+                p1.move(-220,180)
+                label1.move(-220,180)
+                pos = pos + 5
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 6):
+                p1.move(0,180)
+                label1.move(0,180)
+                pos = pos + 6
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+        
+        if (nombre == "Jugador 2") and (pos2 == 1):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 1")
+            nombre = "Jugador 1"
+            if (lanzamiento1 == 1):
+                p2.move(220,0)
+                label2.move(220,0)
+                pos2 = pos2 + 1
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p2.move(440,0)
+                label2.move(440,0)
+                pos2 = pos2 + 2
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p2.move(660,0)
+                label2.move(660,0)
+                pos2 = pos2 + 3
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p2.move(880,0)
+                label2.move(880,0)
+                pos2 = pos2 + 4
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 5):    
+                p2.move(-220,180)
+                label2.move(-220,180)
+                pos2 = pos2 + 5
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 6):
+                p2.move(0,180)
+                label2.move(0,180)
+                pos2 = pos2 + 6
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+        
+        #Se encuentra programado de forma correcta, sacar comentario cuando haya terminado con las demas posiciones           
+        #Posicion 2
+        #win.getMouse()
+        #lanzamiento1 = random.randint(1,6)
+        #salida.setText(lanzamiento1)
+        #while (pos >= 2) and (pos < 3):
+        if (nombre == "Jugador 1") and pos == 2:
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 2")
+            nombre = "Jugador 2"
+            if (lanzamiento1 == 1):
+                p1.move(220,0)
+                label1.move(220,0)
+                pos = pos + 1
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p1.move(440,0)
+                label1.move(440,0)
+                pos = pos + 2
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p1.move(660,0)
+                label1.move(660,0)
+                pos = pos + 3
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p1.move(-440,180)
+                label1.move(-440,180)
+                pos = pos + 4
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 5):    
+                p1.move(-220,180)
+                label1.move(-220,180)
+                pos = pos + 5
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 6):
+                p1.move(0,180)
+                label1.move(0,180)
+                pos = pos + 6        
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+        
+        if (nombre == "Jugador 2") and (pos2 == 2):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 1")
+            nombre = "Jugador 1"
+            if (lanzamiento1 == 1):
+                p2.move(220,0)
+                label2.move(220,0)
+                pos2 = pos2 + 1
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p2.move(440,0)
+                label2.move(440,0)
+                pos2 = pos2 + 2
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p2.move(660,0)
+                label2.move(660,0)
+                pos2 = pos2 + 3
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p2.move(-440,180)
+                label2.move(-440,180)
+                pos2 = pos2 + 4
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 5):    
+                p2.move(-220,180)
+                label2.move(-220,180)
+                pos2 = pos2 + 5
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 6):
+                p2.move(0,180)
+                label2.move(0,180)
+                pos2 = pos2 + 6        
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+        
+        #Se encuentra programado de forma correcta, sacar comentario cuando haya terminado con las demas posiciones           
+        #Posicion 3
+        #win.getMouse()
+        #lanzamiento1 = random.randint(1,6)
+        #salida.setText(lanzamiento1)
+        #while (pos >= 3) and (pos < 4):
+        if (nombre == "Jugador 1") and (pos == 3):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 2")
+            nombre = "Jugador 2"
+            if (lanzamiento1 == 1):
+                p1.move(220,0)
+                label1.move(220,0)
+                pos = pos + 1
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p1.move(440,0)
+                label1.move(440,0)
+                pos = pos + 2
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p1.move(-660,180)
+                label1.move(-660,180)
+                pos = pos + 3
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p1.move(-440,180)
+                label1.move(-440,180)
+                pos = pos + 4
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 5):    
+                p1.move(-220,180)
+                label1.move(-220,180)
+                pos = pos + 5
+            elif (lanzamiento1 == 6):
+                p1.move(0,180)
+                label1.move(0,180)
+                pos = pos + 6     
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)   
+        
+        if (nombre == "Jugador 2") and (pos2 == 3):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 1")
+            nombre = "Jugador 1"
+            if (lanzamiento1 == 1):
+                p2.move(220,0)
+                label2.move(220,0)
+                pos2 = pos2 + 1
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p2.move(440,0)
+                label2.move(440,0)
+                pos2 = pos2 + 2
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p2.move(-660,180)
+                label2.move(-660,180)
+                pos2 = pos2 + 3
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p2.move(-440,180)
+                label2.move(-440,180)
+                pos2 = pos2 + 4
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 5):    
+                p2.move(-220,180)
+                label2.move(-220,180)
+                pos2 = pos2 + 5
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 6):
+                p2.move(0,180)
+                label2.move(0,180)
+                pos2 = pos2 + 6
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)        
+        
+        #Se encuentra programado de forma correcta, sacar comentario cuando haya terminado con las demas posiciones           
+        #Posicion 4
+        #win.getMouse()
+        #lanzamiento1 = random.randint(1,6)
+        #salida.setText(lanzamiento1)
+        #while (pos >= 4) and (pos < 5):
+        if (nombre == "Jugador 1") and (pos == 4):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 2")
+            nombre = "Jugador 2"
+            if (lanzamiento1 == 1):
+                p1.move(220,0)
+                label1.move(220,0)
+                pos = pos + 1
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p1.move(-880,180)
+                label1.move(-880,180)
+                pos = pos + 2
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p1.move(-660,180)
+                label1.move(-660,180)
+                pos = pos + 3
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p1.move(-440,180)
+                label1.move(-440,180)
+                pos = pos + 4
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 5):    
+                p1.move(-220,180)
+                label1.move(-220,180)
+                pos = pos + 5
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 6):
+                p1.move(0,180)
+                label1.move(0,180)
+                pos = pos + 6                       
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+        
+        if (nombre == "Jugador 2") and (pos2 == 4):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 1")
+            nombre = "Jugador 1"
+            if (lanzamiento1 == 1):
+                p2.move(220,0)
+                label2.move(220,0)
+                pos2 = pos2 + 1
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p2.move(-880,180)
+                label2.move(-880,180)
+                pos2 = pos2 + 2
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p2.move(-660,180)
+                label2.move(-660,180)
+                pos2 = pos2 + 3
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p2.move(-440,180)
+                label2.move(-440,180)
+                pos2 = pos2 + 4
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 5):    
+                p2.move(-220,180)
+                label2.move(-220,180)
+                pos2 = pos2 + 5
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 6):
+                p2.move(0,180)
+                label2.move(0,180)
+                pos2 = pos2 + 6
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)                       
+        
+        #Se encuentra programado de forma correcta, sacar comentario cuando haya terminado con las demas posiciones           
+        # #Posicion 5
+        #win.getMouse()
+        #lanzamiento1 = random.randint(1,6)
+        #salida.setText(lanzamiento1)
+        #while (pos >= 5) and (pos < 6):
+        if (nombre == "Jugador 1") and (pos == 5):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 2")
+            nombre = "Jugador 2"
+            if (lanzamiento1 == 1):
+                p1.move(-1130,180)
+                label1.move(-1130,180)
+                pos = pos + 1
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p1.move(-900,180)
+                label1.move(-900,180)
+                pos = pos + 2
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p1.move(-680,180)
+                label1.move(-680,180)
+                pos = pos + 3
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p1.move(-460,180)
+                label1.move(-460,180)
+                pos = pos + 4
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 5):    
+                p1.move(-240,180)
+                label1.move(-240,180)
+                pos = pos + 5
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 6):
+                p1.move(0,180)
+                label1.move(0,180)
+                pos = pos + 6
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+                break                       
+        
+        if (nombre == "Jugador 2") and (pos2 == 5):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 1")
+            nombre = "Jugador 1"
+            if (lanzamiento1 == 1):
+                p2.move(-1130,180)
+                label2.move(-1130,180)
+                pos2 = pos2 + 1
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p2.move(-900,180)
+                label2.move(-900,180)
+                pos2 = pos2 + 2
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p2.move(-680,180)
+                label2.move(-680,180)
+                pos2 = pos2 + 3
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p2.move(-460,180)
+                label2.move(-460,180)
+                pos2 = pos2 + 4
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 5):    
+                p2.move(-240,180)
+                label2.move(-240,180)
+                pos2 = pos2 + 5
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 6):
+                p2.move(0,180)
+                label2.move(0,180)
+                pos2 = pos2 + 6
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+                break                       
+        
+        #Se encuentra programado de forma correcta, sacar comentario cuando haya terminado con las demas posiciones           
+        #Posicion 6
+        #win.getMouse()
+        #lanzamiento1 = random.randint(1,6)
+        #salida.setText(lanzamiento1)
+        #while (pos >=6) and (pos < 7):
+        if (nombre == "Jugador 1") and (pos == 6):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 2")
+            nombre = "Jugador 2"
+            if (lanzamiento1 == 1):
+                p1.move(280,0)
+                label1.move(280,0)
+                pos = pos + 1
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p1.move(500,0)
+                label1.move(500,0)
+                pos = pos + 2
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p1.move(720,0)
+                label1.move(720,0)
+                pos = pos + 3
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p1.move(940,0)
+                label1.move(940,00)
+                pos = pos + 4
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 5):    
+                p1.move(1180,0)
+                label1.move(1180,0)
+                pos = pos + 5
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+                break
+            elif (lanzamiento1 == 6):
+                p1.move(0,0)
+                label1.move(0,0)
+                pos = pos + 0
+        
+
+        if (nombre == "Jugador 2") and (pos2 == 6):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 1")
+            nombre = "Jugador 1"
+            if (lanzamiento1 == 1):
+                p2.move(250,0)
+                label2.move(250,0)
+                pos2 = pos2 + 1
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p2.move(470,0)
+                label2.move(470,0)
+                pos2 = pos2 + 2
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p2.move(690,0)
+                label2.move(690,0)
+                pos2 = pos2 + 3
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p2.move(910,0)
+                label2.move(910,00)
+                pos2 = pos2 + 4
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 5):    
+                p2.move(1130,0)
+                label2.move(1130,0)
+                pos2 = pos2 + 5
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+                break
+            elif (lanzamiento1 == 6):
+                p2.move(0,0)
+                label2.move(0,0)
+                pos2 = pos2 + 0 
+                                      
+        
+        #Se encuentra programado de forma correcta, sacar comentario cuando haya terminado con las demas posiciones           
+        #Posicion 7
+        #win.getMouse()
+        #lanzamiento1 = random.randint(1,6)
+        #salida.setText(lanzamiento1)
+        #while (pos >=7) and (pos < 8):
+        if (nombre == "Jugador 1") and (pos == 7):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 2")
+            nombre = "Jugador 2"
+            if (lanzamiento1 == 1):
+                p1.move(220,0)
+                label1.move(220,0)
+                pos = pos + 1
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p1.move(440,0)
+                label1.move(440,0)
+                pos = pos + 2
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p1.move(660,0)
+                label1.move(660,0)
+                pos = pos + 3
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p1.move(900,0)
+                label1.move(900,00)
+                pos = pos + 4
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+                break
+            elif (lanzamiento1 == 5):    
+                p1.move(0,0)
+                label1.move(0,0)
+                pos = pos + 0
+            elif (lanzamiento1 == 6):
+                p1.move(0,0)
+                label1.move(0,0)
+                pos = pos + 0                       
+        
+        if (nombre == "Jugador 2") and (pos2 == 7):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 1")
+            nombre = "Jugador 1"
+            if (lanzamiento1 == 1):
+                p2.move(220,0)
+                label2.move(220,0)
+                pos2 = pos2 + 1
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p2.move(440,0)
+                label2.move(440,0)
+                pos2 = pos2 + 2
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p2.move(660,0)
+                label2.move(660,0)
+                pos2 = pos2 + 3
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 4):
+                p2.move(900,0)
+                label2.move(900,00)
+                pos2 = pos2 + 4
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+                break
+            elif (lanzamiento1 == 5):    
+                p2.move(0,0)
+                label2.move(0,0)
+                pos2 = pos2 + 0
+            elif (lanzamiento1 == 6):
+                p2.move(0,0)
+                label2.move(0,0)
+                pos2 = pos2 + 0                       
+        
+        #Se encuentra programado de forma correcta, sacar comentario cuando haya terminado con las demas posiciones           
+        # #Posicion 8
+        #win.getMouse()
+        #lanzamiento1 = random.randint(1,6)
+        #salida.setText(lanzamiento1)
+        #while (pos >= 8) and (pos < 9):
+        if (nombre == "Jugador 1") and (pos == 8):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 2")
+            nombre = "Jugador 2"
+            if (lanzamiento1 == 1):
+                p1.move(220,0)
+                label1.move(220,0)
+                pos = pos + 1
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p1.move(440,0)
+                label1.move(440,0)
+                pos = pos + 2
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p1.move(680,0)
+                label1.move(680,0)
+                pos = pos + 3
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+                break
+            elif (lanzamiento1 == 4):
+                p1.move(0,0)
+                label1.move(0,00)
+                pos = pos + 0
+            elif (lanzamiento1 == 5):    
+                p1.move(0,0)
+                label1.move(0,0)
+                pos = pos + 0
+            elif (lanzamiento1 == 6):
+                p1.move(0,0)
+                label1.move(0,0)
+                pos = pos + 0  
+        
+        if (nombre == "Jugador 2") and (pos2 == 8):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 1")
+            nombre = "Jugador 1"
+            if (lanzamiento1 == 1):
+                p2.move(220,0)
+                label2.move(220,0)
+                pos2 = pos2 + 1
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p2.move(440,0)
+                label2.move(440,0)
+                pos2 = pos2 + 2
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 3):
+                p2.move(680,0)
+                label2.move(680,0)
+                pos2 = pos2 + 3
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+                break
+            elif (lanzamiento1 == 4):
+                p2.move(0,0)
+                label2.move(0,00)
+                pos2 = pos2 + 0
+            elif (lanzamiento1 == 5):    
+                p2.move(0,0)
+                label2.move(0,0)
+                pos2 = pos2 + 0
+            elif (lanzamiento1 == 6):
+                p2.move(0,0)
+                label2.move(0,0)
+                pos2 = pos2 + 0  
+        
+        #Se encuentra programado de forma correcta, sacar comentario cuando haya terminado con las demas posiciones           
+        #Posicion 9    
+        #win.getMouse()
+        #lanzamiento1 = random.randint(1,6)
+        #salida.setText(lanzamiento1)
+        #while (pos >= 9) and (pos < 10):
+        if (nombre == "Jugador 1") and (pos == 9):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 2")
+            nombre = "Jugador 2"
+            if (lanzamiento1 == 1):
+                p1.move(220,0)
+                label1.move(220,0)
+                pos = pos + 1
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p1.move(460,0)
+                label1.move(460,0)
+                pos = pos + 2
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+                break
+            elif (lanzamiento1 == 3):
+                p1.move(0,0)
+                label1.move(0,0)
+                pos = pos + 0
+            elif (lanzamiento1 == 4):
+                p1.move(0,0)
+                label1.move(0,00)
+                pos = pos + 0
+            elif (lanzamiento1 == 5):    
+                p1.move(0,0)
+                label1.move(0,0)
+                pos = pos + 0
+            elif (lanzamiento1 == 6):
+                p1.move(0,0)
+                label1.move(0,0)
+                pos = pos + 0  
+        
+        if (nombre == "Jugador 2") and (pos2 == 9):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 1")
+            nombre = "Jugador 1"
+            if (lanzamiento1 == 1):
+                p2.move(220,0)
+                label2.move(220,0)
+                pos2 = pos2 + 1
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+            elif (lanzamiento1 == 2):
+                p2.move(440,0)
+                label2.move(440,0)
+                pos2 = pos2 + 2
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+                break
+            elif (lanzamiento1 == 3):
+                p2.move(0,0)
+                label2.move(0,0)
+                pos2 = pos2 + 0
+            elif (lanzamiento1 == 4):
+                p2.move(0,0)
+                label2.move(0,00)
+                pos2 = pos2 + 0
+            elif (lanzamiento1 == 5):    
+                p2.move(0,0)
+                label2.move(0,0)
+                pos2 = pos2 + 0
+            elif (lanzamiento1 == 6):
+                p2.move(0,0)
+                label2.move(0,0)
+                pos2 = pos2 + 0  
+        
+        #Se encuentra programado de forma correcta, sacar comentario cuando haya terminado con las demas posiciones           
+        #Posicion 10    
+        #win.getMouse()
+        #lanzamiento1 = random.randint(1,6)
+        #salida.setText(lanzamiento1)
+        #while (pos >= 10) and (pos < 11):
+        if (nombre == "Jugador 1") and (pos == 10):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 2")
+            nombre = "Jugador 2"
+            if (lanzamiento1 == 1):
+                p1.move(240,0)
+                label1.move(240,0)
+                pos = pos + 1
+                p1.undraw()
+                label1.undraw()
+                p1.draw(win)
+                label1.draw(win)
+                update(30)
+                break
+            elif (lanzamiento1 == 2):
+                p1.move(0,0)
+                label1.move(0,0)
+                pos = pos + 0
+            elif (lanzamiento1 == 3):
+                p1.move(0,0)
+                label1.move(0,0)
+                pos = pos + 0
+            elif (lanzamiento1 == 4):
+                p1.move(0,0)
+                label1.move(0,0)
+                pos = pos + 0
+            elif (lanzamiento1 == 5):    
+                p1.move(0,0)
+                label1.move(0,0)
+                pos = pos + 0
+            elif (lanzamiento1 == 6):
+                p1.move(0,0)
+                label1.move(0,0)
+                pos = pos + 0
+        
+        if (nombre == "Jugador 2") and (pos2 == 10):
+            win.getMouse()
+            lanzamiento1 = random.randint(1,6)
+            salida.setText(lanzamiento1)
+            boton.setText("Tirar dado Jugador 1")
+            nombre = "Jugador 1"
+            if (lanzamiento1 == 1):
+                p2.move(220,0)
+                label2.move(220,0)
+                pos2 = pos2 + 1
+                p2.undraw()
+                label2.undraw()
+                p2.draw(win)
+                label2.draw(win)
+                update(30)
+                break
+            elif (lanzamiento1 == 2):
+                p2.move(0,0)
+                label2.move(0,0)
+                pos2 = pos2 + 0
+            elif (lanzamiento1 == 3):
+                p2.move(0,0)
+                label2.move(0,0)
+                pos2 = pos2 + 0
+            elif (lanzamiento1 == 4):
+                p2.move(0,0)
+                label2.move(0,0)
+                pos2 = pos2 + 0
+            elif (lanzamiento1 == 5):    
+                p2.move(0,0)
+                label2.move(0,0)
+                pos2 = pos2 + 0
+            elif (lanzamiento1 == 6):
+                p2.move(0,0)
+                label2.move(0,0)
+                pos2 = pos2 + 0
+
+        '''
+        win.getMouse()
+        lanzamiento1 = random.randint(1,6)
+        salida.setText(lanzamiento1)
+        '''
+
+
+    #Se espera que se realice un click para finalizar/cerrar la ventana
+    if (pos == 11):
+        mensajefinal = Text(Point(1000,650),"Ganador : Jugador 1")
+        mensajefinal.draw(win)
+        mensajefinal.setStyle("bold")
+    elif (pos2 == 11):
+        mensajefinal = Text(Point(1000,650),"Ganador : Jugador 2")    
+        mensajefinal.draw(win)
+        mensajefinal.setStyle("bold")
+    win.getMouse()
+    win.close()
+
+main()
+    
+
+
