@@ -143,6 +143,33 @@ def main():
     pos = 0
     pos2 = 0
     
+    #Se crean dos funciones para los "lanzamientos de los jugadores"
+    def lanzamientojugador1():
+        win.getMouse()
+        global lanzamiento1
+        nonlocal salida
+        nonlocal boton
+        global nombre
+        lanzamiento1 = random.randint(1,6)
+        salida.setText(lanzamiento1)
+        boton.setText("Tirar dado Jugador 2")         
+        nombre = "Jugador 2"
+        return (lanzamiento1,salida,boton,nombre)
+
+    def lanzamientojugador2():
+        win.getMouse()
+        global lanzamiento1
+        nonlocal salida
+        nonlocal boton
+        global nombre
+        lanzamiento1 = random.randint(1,6)
+        salida.setText(lanzamiento1)
+        boton.setText("Tirar dado Jugador 1")         
+        nombre = "Jugador 1"    
+        return (lanzamiento1,salida,boton,nombre)
+
+
+    
     while (pos < 11) or (pos2 < 11):
         
         
@@ -150,12 +177,7 @@ def main():
         #Siempre la primer posicion va a ser equivalente a cero porque es el punto de partida.
         #Se realiza el "lanzamiento" aleatorio y se avanza a la casilla correspondiente.
         if (pos == 0):
-            #Primer lanzamiento del dado.
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 2")
-            nombre = "Jugador 2"
+            lanzamientojugador1()
             if (lanzamiento1 == 1):
                 p1.move(280,0)
                 label1.move(280,0)
@@ -164,7 +186,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p1.move(500,0)
                 label1.move(500,0)
@@ -173,7 +194,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p1.move(720,0)
                 label1.move(720,0)
@@ -182,7 +202,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p1.move(940,0)
                 label1.move(940,0)
@@ -191,7 +210,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 5):
                 p1.move(1180,0)
                 label1.move(1180,0)
@@ -200,7 +218,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 6):
                 p1.move(0,180)
                 label1.move(0,180)
@@ -209,15 +226,10 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
 
-        # #Posicion 1 - para el Jugador 01
-        if (pos == 1):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 2")
-            nombre = "Jugador 2"
+        #Posicion 1 - para el Jugador 01
+        if (nombre == "Jugador 1") and (pos == 1):
+            lanzamientojugador1()
             if (nombre == "Jugador 1") and (lanzamiento1 == 1):
                 p1.move(220,0)
                 label1.move(220,0)
@@ -226,7 +238,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p1.move(440,0)
                 label1.move(440,0)
@@ -235,7 +246,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p1.move(660,0)
                 label1.move(660,0)
@@ -244,7 +254,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p1.move(900,0)
                 label1.move(900,0)
@@ -253,7 +262,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 5):    
                 p1.move(-280,180)
                 label1.move(-280,180)
@@ -262,7 +270,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 6):
                 p1.move(0,180)
                 label1.move(0,180)
@@ -271,15 +278,10 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
 
         #Posicion 2
         if (nombre == "Jugador 1") and (pos == 2):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 2")
-            nombre = "Jugador 2"
+            lanzamientojugador1()
             if (lanzamiento1 == 1):
                 p1.move(220,0)
                 label1.move(220,0)
@@ -288,7 +290,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p1.move(440,0)
                 label1.move(440,0)
@@ -297,7 +298,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p1.move(680,0)
                 label1.move(680,0)
@@ -306,7 +306,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p1.move(-500,180)
                 label1.move(-500,180)
@@ -315,7 +314,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 5):    
                 p1.move(-220,180)
                 label1.move(-220,180)
@@ -324,7 +322,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 6):
                 p1.move(0,180)
                 label1.move(0,180)
@@ -333,15 +330,10 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
 
         #Posicion 3
         if (nombre == "Jugador 1") and (pos == 3):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 2")
-            nombre = "Jugador 2"
+            lanzamientojugador1()
             if (lanzamiento1 == 1):
                 p1.move(220,0)
                 label1.move(220,0)
@@ -350,7 +342,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p1.move(460,0)
                 label1.move(460,0)
@@ -359,7 +350,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p1.move(-720,180)
                 label1.move(-720,180)
@@ -368,7 +358,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p1.move(-440,180)
                 label1.move(-440,180)
@@ -377,7 +366,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 5):    
                 p1.move(-220,180)
                 label1.move(-220,180)
@@ -390,15 +378,10 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
 
         #Posicion 4
         if (nombre == "Jugador 1") and (pos == 4):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 2")
-            nombre = "Jugador 2"
+            lanzamientojugador1()
             if (lanzamiento1 == 1):
                 p1.move(240,0)
                 label1.move(240,0)
@@ -407,7 +390,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p1.move(-940,180)
                 label1.move(-940,180)
@@ -416,7 +398,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p1.move(-660,180)
                 label1.move(-660,180)
@@ -425,7 +406,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p1.move(-440,180)
                 label1.move(-440,180)
@@ -434,7 +414,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 5):    
                 p1.move(-220,180)
                 label1.move(-220,180)
@@ -443,7 +422,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 6):
                 p1.move(0,180)
                 label1.move(0,180)
@@ -452,15 +430,10 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
 
         #Posicion 5
         if (nombre == "Jugador 1") and (pos == 5):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 2")
-            nombre = "Jugador 2"
+            lanzamientojugador1()
             if (lanzamiento1 == 1):
                 p1.move(-1180,180)
                 label1.move(-1180,180)
@@ -469,7 +442,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p1.move(-900,180)
                 label1.move(-900,180)
@@ -478,7 +450,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p1.move(-680,180)
                 label1.move(-680,180)
@@ -487,7 +458,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p1.move(-460,180)
                 label1.move(-460,180)
@@ -496,7 +466,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 5):    
                 p1.move(-240,180)
                 label1.move(-240,180)
@@ -505,7 +474,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 6):
                 p1.move(0,180)
                 label1.move(0,180)
@@ -514,16 +482,11 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
                 break                       
 
         #Posicion 6
         if (nombre == "Jugador 1") and (pos == 6):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 2")
-            nombre = "Jugador 2"
+            lanzamientojugador1()
             if (lanzamiento1 == 1):
                 p1.move(280,0)
                 label1.move(280,0)
@@ -532,7 +495,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p1.move(500,0)
                 label1.move(500,0)
@@ -541,7 +503,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p1.move(720,0)
                 label1.move(720,0)
@@ -550,7 +511,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p1.move(940,0)
                 label1.move(940,00)
@@ -559,7 +519,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 5):    
                 p1.move(1180,0)
                 label1.move(1180,0)
@@ -568,7 +527,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
                 break
             elif (lanzamiento1 == 6):
                 p1.move(0,0)
@@ -577,11 +535,7 @@ def main():
 
         #Posicion 7
         if (nombre == "Jugador 1") and (pos == 7):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 2")
-            nombre = "Jugador 2"
+            lanzamientojugador1()
             if (lanzamiento1 == 1):
                 p1.move(220,0)
                 label1.move(220,0)
@@ -590,7 +544,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p1.move(440,0)
                 label1.move(440,0)
@@ -599,7 +552,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p1.move(660,0)
                 label1.move(660,0)
@@ -608,7 +560,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p1.move(900,0)
                 label1.move(900,00)
@@ -617,7 +568,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
                 break
             elif (lanzamiento1 == 5):    
                 p1.move(0,0)
@@ -630,11 +580,7 @@ def main():
 
         #Posicion 8
         if (pos == 8):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 2")
-            nombre = "Jugador 2"
+            lanzamientojugador1()
             if (lanzamiento1 == 1):
                 p1.move(220,0)
                 label1.move(220,0)
@@ -643,7 +589,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p1.move(440,0)
                 label1.move(440,0)
@@ -652,7 +597,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p1.move(680,0)
                 label1.move(680,0)
@@ -661,7 +605,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
                 break
             elif (lanzamiento1 == 4):
                 p1.move(0,0)
@@ -678,11 +621,7 @@ def main():
 
         #Posicion 9    
         if (nombre == "Jugador 1") and (pos == 9):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 2")
-            nombre = "Jugador 2"
+            lanzamientojugador1()
             if (lanzamiento1 == 1):
                 p1.move(220,0)
                 label1.move(220,0)
@@ -691,7 +630,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p1.move(460,0)
                 label1.move(460,0)
@@ -700,7 +638,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
                 break
             elif (lanzamiento1 == 3):
                 p1.move(0,0)
@@ -721,11 +658,7 @@ def main():
 
         #Posicion 10    
         if (nombre == "Jugador 1") and (pos == 10):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 2")
-            nombre = "Jugador 2"
+            lanzamientojugador1()
             if (lanzamiento1 == 1):
                 p1.move(240,0)
                 label1.move(240,0)
@@ -734,7 +667,6 @@ def main():
                 label1.undraw()
                 p1.draw(win)
                 label1.draw(win)
-                update(30)
                 break
             elif (lanzamiento1 == 2):
                 p1.move(0,0)
@@ -761,11 +693,7 @@ def main():
 
         #Jugador02
         if (pos2 == 0):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 1")
-            nombre = "Jugador 1"
+            lanzamientojugador2()
             if (lanzamiento1 == 1):
                 p2.move(250,0)
                 label2.move(250,0)
@@ -774,7 +702,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p2.move(470,0)
                 label2.move(470,0)
@@ -783,7 +710,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p2.move(690,0)
                 label2.move(690,0)
@@ -792,7 +718,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p2.move(910,0)
                 label2.move(910,0)
@@ -801,7 +726,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 5):
                 p2.move(1130,0)
                 label2.move(1130,0)
@@ -810,7 +734,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 6):
                 p2.move(0,180)
                 label2.move(0,180)
@@ -819,16 +742,10 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
-                
         
         
         if (nombre == "Jugador 2") and (pos2 == 1):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 1")
-            nombre = "Jugador 1"
+            lanzamientojugador2()
             if (lanzamiento1 == 1):
                 p2.move(220,0)
                 label2.move(220,0)
@@ -837,7 +754,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p2.move(440,0)
                 label2.move(440,0)
@@ -846,7 +762,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p2.move(660,0)
                 label2.move(660,0)
@@ -855,7 +770,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p2.move(880,0)
                 label2.move(880,0)
@@ -864,7 +778,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 5):    
                 p2.move(-250,180)
                 label2.move(-250,180)
@@ -873,7 +786,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 6):
                 p2.move(0,180)
                 label2.move(0,180)
@@ -882,15 +794,10 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
         
         
         if (nombre == "Jugador 2") and (pos2 == 2):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 1")
-            nombre = "Jugador 1"
+            lanzamientojugador2()
             if (lanzamiento1 == 1):
                 p2.move(220,0)
                 label2.move(220,0)
@@ -899,7 +806,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p2.move(440,0)
                 label2.move(440,0)
@@ -908,7 +814,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p2.move(660,0)
                 label2.move(660,0)
@@ -917,7 +822,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p2.move(-470,180)
                 label2.move(-470,180)
@@ -926,7 +830,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 5):    
                 p2.move(-220,180)
                 label2.move(-220,180)
@@ -935,7 +838,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 6):
                 p2.move(0,180)
                 label2.move(0,180)
@@ -944,15 +846,10 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
         
         
         if (nombre == "Jugador 2") and (pos2 == 3):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 1")
-            nombre = "Jugador 1"
+            lanzamientojugador2()
             if (lanzamiento1 == 1):
                 p2.move(220,0)
                 label2.move(220,0)
@@ -961,7 +858,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p2.move(440,0)
                 label2.move(440,0)
@@ -970,7 +866,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p2.move(-690,180)
                 label2.move(-690,180)
@@ -979,7 +874,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p2.move(-440,180)
                 label2.move(-440,180)
@@ -988,7 +882,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 5):    
                 p2.move(-220,180)
                 label2.move(-220,180)
@@ -997,7 +890,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 6):
                 p2.move(0,180)
                 label2.move(0,180)
@@ -1005,16 +897,11 @@ def main():
                 p2.undraw()
                 label2.undraw()
                 p2.draw(win)
-                label2.draw(win)
-                update(30)        
+                label2.draw(win)  
         
         
         if (nombre == "Jugador 2") and (pos2 == 4):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 1")
-            nombre = "Jugador 1"
+            lanzamientojugador2()
             if (lanzamiento1 == 1):
                 p2.move(220,0)
                 label2.move(220,0)
@@ -1023,7 +910,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p2.move(-910,180)
                 label2.move(-910,180)
@@ -1032,7 +918,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p2.move(-660,180)
                 label2.move(-660,180)
@@ -1041,7 +926,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p2.move(-440,180)
                 label2.move(-440,180)
@@ -1050,7 +934,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 5):    
                 p2.move(-220,180)
                 label2.move(-220,180)
@@ -1059,7 +942,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 6):
                 p2.move(0,180)
                 label2.move(0,180)
@@ -1067,16 +949,11 @@ def main():
                 p2.undraw()
                 label2.undraw()
                 p2.draw(win)
-                label2.draw(win)
-                update(30)                       
+                label2.draw(win)                       
         
         
         if (nombre == "Jugador 2") and (pos2 == 5):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 1")
-            nombre = "Jugador 1"
+            lanzamientojugador2()
             if (lanzamiento1 == 1):
                 p2.move(-1130,180)
                 label2.move(-1130,180)
@@ -1085,7 +962,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p2.move(-880,180)
                 label2.move(-880,180)
@@ -1094,7 +970,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p2.move(-660,180)
                 label2.move(-660,180)
@@ -1103,7 +978,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p2.move(-440,180)
                 label2.move(-440,180)
@@ -1112,7 +986,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 5):    
                 p2.move(-220,180)
                 label2.move(-220,180)
@@ -1121,7 +994,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 6):
                 p2.move(0,180)
                 label2.move(0,180)
@@ -1130,17 +1002,11 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
                 break                       
-        
         
 
         if (nombre == "Jugador 2") and (pos2 == 6):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 1")
-            nombre = "Jugador 1"
+            lanzamientojugador2()
             if (lanzamiento1 == 1):
                 p2.move(250,0)
                 label2.move(250,0)
@@ -1149,7 +1015,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p2.move(470,0)
                 label2.move(470,0)
@@ -1158,7 +1023,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p2.move(690,0)
                 label2.move(690,0)
@@ -1167,7 +1031,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p2.move(910,0)
                 label2.move(910,00)
@@ -1176,7 +1039,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 5):    
                 p2.move(1130,0)
                 label2.move(1130,0)
@@ -1185,7 +1047,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
                 break
             elif (lanzamiento1 == 6):
                 p2.move(0,0)
@@ -1195,11 +1056,7 @@ def main():
         
         
         if (nombre == "Jugador 2") and  (pos2 == 7):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 1")
-            nombre = "Jugador 1"
+            lanzamientojugador2()
             if (lanzamiento1 == 1):
                 p2.move(220,0)
                 label2.move(220,0)
@@ -1208,7 +1065,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p2.move(440,0)
                 label2.move(440,0)
@@ -1217,7 +1073,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p2.move(660,0)
                 label2.move(660,0)
@@ -1226,7 +1081,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 4):
                 p2.move(900,0)
                 label2.move(900,00)
@@ -1235,7 +1089,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
                 break
             elif (lanzamiento1 == 5):    
                 p2.move(0,0)
@@ -1246,13 +1099,9 @@ def main():
                 label2.move(0,0)
                 pos2 = pos2 + 0                       
         
-        
+
         if (nombre == "Jugador 2") and (pos2 == 8):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 1")
-            nombre = "Jugador 1"
+            lanzamientojugador2()
             if (lanzamiento1 == 1):
                 p2.move(220,0)
                 label2.move(220,0)
@@ -1261,7 +1110,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p2.move(440,0)
                 label2.move(440,0)
@@ -1270,7 +1118,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 3):
                 p2.move(680,0)
                 label2.move(680,0)
@@ -1279,7 +1126,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
                 break
             elif (lanzamiento1 == 4):
                 p2.move(0,0)
@@ -1296,11 +1142,7 @@ def main():
         
         
         if (nombre == "Jugador 2") and (pos2 == 9):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 1")
-            nombre = "Jugador 1"
+            lanzamientojugador2()
             if (lanzamiento1 == 1):
                 p2.move(220,0)
                 label2.move(220,0)
@@ -1309,7 +1151,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
             elif (lanzamiento1 == 2):
                 p2.move(440,0)
                 label2.move(440,0)
@@ -1318,7 +1159,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
                 break
             elif (lanzamiento1 == 3):
                 p2.move(0,0)
@@ -1339,11 +1179,7 @@ def main():
         
         
         if (nombre == "Jugador 2") and (pos2 == 10):
-            win.getMouse()
-            lanzamiento1 = random.randint(1,6)
-            salida.setText(lanzamiento1)
-            boton.setText("Tirar dado Jugador 1")
-            nombre = "Jugador 1"
+            lanzamientojugador2()
             if (lanzamiento1 == 1):
                 p2.move(220,0)
                 label2.move(220,0)
@@ -1352,7 +1188,6 @@ def main():
                 label2.undraw()
                 p2.draw(win)
                 label2.draw(win)
-                update(30)
                 break
             elif (lanzamiento1 == 2):
                 p2.move(0,0)
@@ -1375,6 +1210,7 @@ def main():
                 label2.move(0,0)
                 pos2 = pos2 + 0
 
+        update()
 
     
     #Se muestra en la ventana un mensaje con el jugador que gano la partida
