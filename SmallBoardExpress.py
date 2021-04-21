@@ -1376,7 +1376,8 @@ def main():
                 pos2 = pos2 + 0
 
 
-    #Se espera que se realice un click para finalizar/cerrar la ventana
+    
+    #Se muestra en la ventana un mensaje con el jugador que gano la partida
     if (pos == 11):
         mensajefinal = Text(Point(1000,650),"Ganador : Jugador 1")
         mensajefinal.draw(win)
@@ -1385,6 +1386,11 @@ def main():
         mensajefinal = Text(Point(1000,650),"Ganador : Jugador 2")    
         mensajefinal.draw(win)
         mensajefinal.setStyle("bold")
+    
+    #Se espera que se realice un click para finalizar/cerrar la ventana
+    mensajecerrar = Text(Point(700,700),"Haga un click para cerrar la ventana")
+    mensajecerrar.draw(win)
+    mensajecerrar.setSize(15)
     win.getMouse()
     win.close()
 
