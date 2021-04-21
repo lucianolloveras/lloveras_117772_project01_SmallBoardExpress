@@ -1,0 +1,24 @@
+Descripcion:
+El juego esta formado por dos jugadores, el jugador 1 tiene una ficha con forma de cuadrado, mientras que el jugador 2 tiene una ficha con forma circular. Hay un tablero
+con 11 posiciones. Se "lanza" un dado y ek jugador que llegue primero a la casilla 11 es el ganador. Si el jugador se encuentra en la casilla 6 y saca un 6 al lanzar el dado,
+no se mueve y pasa el turno al jugador 2. Lo mismo pasa con las posiciones 7, 8, 9 y 10.
+
+El algoritmo cuenta con la librería graphics en la cual permite crear una ventana con las formas de las fichas y el tablero. Usando los objetos "Rectangle" y "Circle" se crean
+las fichas de los jugadores. Con la funcion Text, se da nombre a las fichas para identificarlas. Luego con los objetos "Line" y "Rectangle" se crea el tablero. El dado se
+crea a partir del objeto "Rectangle". El mismo se visualizara como si fuera un boton, en el cual se hace click y se obtiene el valor del dado.
+
+Una vez creado el tablero, las fichas y el dado, se procede a crear la lógica correspondiente al lanzamiento del dado. Para ello tenemos la librería random, el cual se hace 
+uso de la función randint, el cual se especifíca un rango. De acuerdo con dicho rango, la función devuelve como valor un numero aleatorio. En mi caso, el rango fue de 1 a 6 
+porque se utiliza un solo dado, el cual tiene 6 caras posibles.
+
+Finalmente continúa la logica correspondiente a las posiciones de las fichas. La misma se encuentra en una estructura de control (while) que va a finalizar cuando la posición
+del jugador 1 o 2 sea igual a 11. La lógica para cada posición esta definida por un "If" el cual verifica la posición de la ficha. Luego se encuentran distintos elif que
+validan la posición que tendrá la ficha una vez lanzado el dado. Para obtener este valor, se llama la función lanzamientojugador1/lanzamientojugador2 (dependiendo el caso). 
+Dentro de cada condicion (elif) se hace un acumulador de posición, para determinar donde se ubicara la ficha y a partir de que posición se tendra que mover nuevamente.
+Esto se repite para el jugador 2.
+
+Mediante una condicion "If", determinamos el valor de la posición del jugador1/2. En base a este resultado, se creo un mensaje para informar el ganador. Para terminar con
+el programa, se crea un mensaje para informar que a través de un click, el jugador puede cerrar la ventana.
+
+
+
